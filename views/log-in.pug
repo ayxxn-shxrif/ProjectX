@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  form(class="login__form", method="POST", action="/log-in")
+    div.input-group
+      label(for="username") Username:
+      input#username(type="text", name="username")
+    div.input-group
+      label(for="password") Password:
+      input#password(type="password", name="password")
+    button(type="submit") Login
+  if errors
+    ul
+      for error in errors
+        li!= error.msg
+  
