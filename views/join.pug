@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  form(class="join__form", method="POST", action="/join")
+    div.input-group
+      label(for="password") Enter Secret password(its not really that secret, literally 1234):
+      input#password(type="text", name="password")
+    button(type="submit") Join Members Club
+  if errors
+    ul
+      for error in errors
+        li!= error.msg
+  
