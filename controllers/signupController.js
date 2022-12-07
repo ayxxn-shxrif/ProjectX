@@ -63,10 +63,9 @@ exports.signup_post = [
             callback(err, null);
           }
           if (users !== null) {
-            const error = new Error('Username is already in use.');
-            error.status = 409;
-            res.render('sign-up', { errors: error });
-            callback(error, null);
+            const error = 'Username is already taken.';
+            res.render('sign-up', { error });
+            callback(null, users);
           }
           if (users == null) {
             callback(null, users);
@@ -74,7 +73,7 @@ exports.signup_post = [
         });
       },
       function (callback, users) {
-        if (users) {
+        if (!users) {
           bcrypt.hash(req.body.password, 10, (error, hashedPassword) => {
             if (error) {
               return next(error);
