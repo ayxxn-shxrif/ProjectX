@@ -8,6 +8,9 @@ block content
     div.input-group
       label(for="password") Password:
       input#password(type="password", name="password")
+    div.input-group
+      label(for="conf-pass") Password:
+      input#conf-pass(type="password", name="conf-pass")
   if errors
     ul
       for error in errors
