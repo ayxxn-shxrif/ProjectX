@@ -64,7 +64,7 @@ exports.signup_post = [
           }
           if (users !== null) {
             const error = 'Username is already taken.';
-            res.render('sign-up', { error });
+            res.render('sign-up', { errors: [{ msg: error }] });
             callback(null, users);
           }
           if (users == null) {
