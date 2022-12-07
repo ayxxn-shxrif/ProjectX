@@ -6,11 +6,18 @@ block content
       label(for="username") Username:
       input#username(type="text", name="username")
     div.input-group
+      label(for="name") Name:
+      input#name(type="text", name="name")
+    div.input-group
+      label(for="surname") Surname:
+      input#surname(type="text", name="surname")
+    div.input-group
       label(for="password") Password:
       input#password(type="password", name="password")
     div.input-group
-      label(for="conf-pass") Password:
+      label(for="conf-pass") Confirm Password:
       input#conf-pass(type="password", name="conf-pass")
+    button(type="submit") Submit
   if errors
     ul
       for error in errors

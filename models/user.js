@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const UserSchema = new Schema({
-  username: { type: String, required: true },
+  username: { type: String, required: true, maxLength: 50 },
   password: { type: String, required: true },
   name: { type: String, required: true, maxLength: 100 },
   surname: { type: String, required: true, maxLength: 100 },
-  is_member: { type: Boolean, required: true },
+  is_member: { type: Boolean, default: true },
 });
 
 UserSchema.virtual('full_name').get(function () {
