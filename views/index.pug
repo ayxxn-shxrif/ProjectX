@@ -18,7 +18,7 @@ block content
           p= message.text
         if user && user.is_admin
           .delete_ui
-            form(method="POST", action=`/delete/${message.id}`)
+            a(href=`/delete/${message.id}`)
               button(type="submit") Delete message
 
 
