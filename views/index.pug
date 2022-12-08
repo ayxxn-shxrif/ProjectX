@@ -1,8 +1,20 @@
 extends layout
 
 block content
-  if user
-    h1 Welcome #{user.full_name}
-  else 
-    h1= title
-  p Welcome to #{title}
+  div.home_content
+    h1 Members Club
+    each message in messages
+      .message
+        if user && user.is_member
+          .message_info
+            .author
+              span Author:
+              span= message.user.full_name
+            .date
+              span Date added:
+              span= message.date_formatted
+        .message_content
+          h2= message.title
+          p= message.text
+
+  
