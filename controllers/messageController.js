@@ -45,3 +45,5 @@ exports.message_post = [
     }
   },
 ];
+
+exports.message_delete = (req, res, next) => {};

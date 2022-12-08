@@ -5,7 +5,7 @@ block content
     h1 Members Club
     each message in messages
       .message
-        if user && user.is_member
+        if user && (user.is_member || user.is_admin)
           .message_info
             .author
               span Author:
@@ -16,5 +16,10 @@ block content
         .message_content
           h2= message.title
           p= message.text
+        if user && user.is_admin
+          .delete_ui
+            form(method="POST", action=`/delete/${message.id}`)
+              button(type="submit") Delete message
+
 
   
