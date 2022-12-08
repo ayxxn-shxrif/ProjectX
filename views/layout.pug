@@ -11,8 +11,9 @@ html
             button.btn.btn-primary Logout 
           a(href="/new-message")
             button.btn.btn-primary Create New Message
-          a(href="/join")
-            button.btn.btn-primary Join Members Club
+          if !user.is_member
+            a(href="/join")
+              button.btn.btn-primary Join Members Club
         else if !user
           a(href="/sign-up")
             button.btn.btn-primary Sign-up
