@@ -1,9 +1,15 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const Message = require('../models/message');
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express', user: req.user });
+const router = express.Router();
+
+router.get('/', (req, res, next) => {
+  Message.find().exec((err, messages) => {
+    if (err) {
+      next(err);
+    }
+    res.render('index', { title: 'Express', user: req.user, messages });
+  });
 });
 
 module.exports = router;
