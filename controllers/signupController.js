@@ -65,15 +65,15 @@ exports.signup_post = [
           if (users.length > 0) {
             const error = 'Username is already taken.';
             res.render('sign-up', { errors: [{ msg: error }] });
-            callback(null, users);
+            callback(null, true);
           }
           if (users.length === 0) {
-            callback(null, users);
+            callback(null, false);
           }
         });
       },
-      function (callback, users) {
-        if (users.length === 0) {
+      function (callback, isUsernameTaken) {
+        if (!isUsernameTaken) {
           bcrypt.hash(req.body.password, 10, (error, hashedPassword) => {
             if (error) {
               return next(error);
