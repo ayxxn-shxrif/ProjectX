@@ -1,13 +1,18 @@
 extends layout
 
 block content
-  form(class="join__form", method="POST", action="/join")
-    div.input-group
-      label(for="password") Enter Secret password(its not really that secret, literally 1234):
-      input#password(type="text", name="password")
-    button(type="submit") Join Members Club
-  if errors
-    ul
-      for error in errors
-        li!= error.msg
+  if user
+    div.join_content.content
+      form(class="join__form", method="POST", action="/join")
+        div.input-group
+          label(for="password") Enter Secret password(its not really that secret, literally 1234):
+          input#password(type="text", name="password")
+        button(type="submit") Join Members Club
+      if errors
+        ul
+          for error in errors
+            li!= error.msg
+  else
+    div.join_content.content
+      h1 Login in order to be able to join the Members Club!
   

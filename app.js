@@ -8,10 +8,9 @@ const passport = require('passport');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
-const User = require('./models/user');
-
 const indexRouter = require('./routes/index');
 const signupRouter = require('./routes/sign-up');
+const joinRouter = require('./routes/join');
 const loginRouter = require('./routes/log-in');
 const logoutRouter = require('./routes/log-out');
 
@@ -41,6 +40,7 @@ app.use('/', indexRouter);
 app.use('/sign-up', signupRouter);
 app.use('/log-in', loginRouter);
 app.use('/log-out', logoutRouter);
+app.use('/join', joinRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
