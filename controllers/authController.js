@@ -1,5 +1,5 @@
 exports.login_get = (req, res) => {
-  res.render('log-in');
+  res.render('log-in', { user: req.user });
 };
 
 exports.logout_get = (req, res, next) => {

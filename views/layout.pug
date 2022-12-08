@@ -4,4 +4,19 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    header.header
+      nav
+        if user
+          a(href="/log-out")
+            button.btn.btn-primary Logout 
+          a(href="/new-message")
+            button.btn.btn-primary Create New Message
+          a(href="/join")
+            button.btn.btn-primary Join Members Club
+        else if !user
+          a(href="/sign-up")
+            button.btn.btn-primary Sign-up
+          a(href="/log-in")
+            button.btn.btn-primary Login
+    main
+      block content

@@ -4,7 +4,7 @@ const async = require('async');
 const User = require('../models/user');
 
 exports.signup_get = (req, res) => {
-  res.render('sign-up');
+  res.render('sign-up', { user: req.user });
 };
 
 exports.signup_post = [
@@ -54,6 +54,7 @@ exports.signup_post = [
     if (!errors.isEmpty()) {
       return res.render('sign-up', {
         errors: errors.array(),
+        user: req.user,
       });
     }
     async.waterfall([
@@ -64,7 +65,7 @@ exports.signup_post = [
           }
           if (users.length > 0) {
             const error = 'Username is already taken.';
-            res.render('sign-up', { errors: [{ msg: error }] });
+            res.render('sign-up', { errors: [{ msg: error }], user: req.user });
             callback(null, true);
           }
           if (users.length === 0) {
