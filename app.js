@@ -29,7 +29,6 @@ app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(session({ secret: 'cats', resave: false, saveUninitialized: true }));
-app.use(passport.authenticate('session'));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.json());
