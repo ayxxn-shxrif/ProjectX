@@ -1,5 +1,5 @@
 const express = require('express');
-const login_controller = require('../controllers/loginController');
+const auth_controller = require('../controllers/authController');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcryptjs');
@@ -39,7 +39,7 @@ passport.deserializeUser(function (id, done) {
   });
 });
 
-router.get('/', login_controller.login_get);
+router.get('/', auth_controller.login_get);
 
 router.post(
   '/',
