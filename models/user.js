@@ -11,7 +11,9 @@ const UserSchema = new Schema({
 });
 
 UserSchema.virtual('full_name').get(function () {
-  return `${this.name} ${this.surname}`;
+  const name = this.name.charAt(0).toUpperCase() + this.name.slice(1);
+  const surname = this.surname.charAt(0).toUpperCase() + this.surname.slice(1);
+  return `${name} ${surname}`;
 });
 
 module.exports = mongoose.model('User', UserSchema);
