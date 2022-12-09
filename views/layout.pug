@@ -4,21 +4,27 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap', rel='stylesheet')
   body
-    header.header
-      nav
-        if user
-          a(href="/log-out")
-            button.btn.btn-primary Logout 
-          a(href="/new-message")
-            button.btn.btn-primary Create New Message
-          if !user.is_member
-            a(href="/join")
-              button.btn.btn-primary Join Members Club
-        else if !user
-          a(href="/sign-up")
-            button.btn.btn-primary Sign-up
-          a(href="/log-in")
-            button.btn.btn-primary Login
-    main
-      block content
+    .app
+      header.header
+        .logo
+          h1 Members Club
+        nav
+          if user
+            a(href="/log-out")
+              button.btn.btn-primary Logout 
+            a(href="/new-message")
+              button.btn.btn-primary Create New Message
+            if !user.is_member
+              a(href="/join")
+                button.btn.btn-primary Join Members Club
+          else if !user
+            a(href="/sign-up")
+              button.btn.btn-primary Sign-up
+            a(href="/log-in")
+              button.btn.btn-primary Login
+      main
+        block content
