@@ -5,10 +5,10 @@ block content
     form(class="message__form", method="POST", action="/new-message")
       div.input-group
         label(for="title") Title
-        input#title(type="text", name="title")
+        input#title(type="text", name="title", placeholder="Lorem ipsum dolor sit amet...")
       div.input-group
         label(for="text") Text:
-        textarea#text(type="text", name="text")
+        textarea#text(type="text", name="text", placeholder="Enter your message here...")
       button.btn-primary(type="submit") Submit
     if errors
       ul

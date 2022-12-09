@@ -4,19 +4,19 @@ block content
   form(class="signup__form", method="POST", action="/sign-up")
     div.input-group
       label(for="username") Username:
-      input#username(type="text", name="username")
+      input#username(type="text", name="username", placeholder="admin")
     div.input-group
       label(for="name") Name:
-      input#name(type="text", name="name")
+      input#name(type="text", name="name", placeholder="Jon")
     div.input-group
       label(for="surname") Surname:
-      input#surname(type="text", name="surname")
+      input#surname(type="text", name="surname", placeholder="Doe")
     div.input-group
       label(for="password") Password:
-      input#password(type="password", name="password")
+      input#password(type="password", name="password", placeholder="********")
     div.input-group
       label(for="conf-pass") Confirm Password:
-      input#conf-pass(type="password", name="conf-pass")
+      input#conf-pass(type="password", name="conf-pass", placeholder="********")
     if user && user.is_admin
       div.input-group
         label(for="admin") Admin:

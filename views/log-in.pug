@@ -4,10 +4,10 @@ block content
   form(class="login__form", method="POST", action="/log-in")
     div.input-group
       label(for="username") Username:
-      input#username(type="text", name="username")
+      input#username(type="text", name="username", placeholder="Your username")
     div.input-group
       label(for="password") Password:
-      input#password(type="password", name="password")
+      input#password(type="password", name="password", placeholder="**********")
     button.btn-primary(type="submit") Login
   if errors
     ul

@@ -5,8 +5,8 @@ block content
     div.join_content.content
       form(class="join__form", method="POST", action="/join")
         div.input-group
-          label(for="password") Enter Secret password(its not really that secret, literally 1234):
-          input#password(type="text", name="password")
+          label(for="password") Enter Secret password:
+          input#password(type="text", name="password", placeholder="1234")
         button(type="submit") Join Members Club
       if errors
         ul
