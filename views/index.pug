@@ -15,7 +15,7 @@ block content
               span.text-highlighted= message.date_formatted
         .message_content
           h3= message.title
-          p= message.text
+          p.message_desc= message.text
         if user && user.is_admin
           .delete_ui
             a(href=`/delete/${message.id}`)
