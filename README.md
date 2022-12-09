@@ -1,6 +1,6 @@
 # express-members-only
 
-A application in which every user can view posted messages, but only logged in "club members" can see who posted them. The purpose of this project was to learn more about authentication with [passport.js](https://www.passportjs.org/). Made with [Node.js](https://nodejs.org/en/) and [Express](https://expressjs.com/) along with [pug](https://pugjs.org/language/plain-text.html) for creating view templates. [MongoDB](https://www.mongodb.com/) was used for a database along with [mongoose](https://mongoosejs.com/) ODM for modeling the application.
+An application in which every user can view posted messages, but only logged in "club members" can see who posted them. The purpose of this project was to learn more about authentication with [passport.js](https://www.passportjs.org/). Made with [Node.js](https://nodejs.org/en/) and [Express](https://expressjs.com/) along with [pug](https://pugjs.org/language/plain-text.html) for creating view templates. [MongoDB](https://www.mongodb.com/) was used for a database along with [mongoose](https://mongoosejs.com/) ODM for modeling the application.
 
 ##### There will be up to 30s response delay upon entering the website due to render.com free tier restrictions.
 ### Live: [https://express-members-only-c8zw.onrender.com](https://express-members-only-c8zw.onrender.com)
