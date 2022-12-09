@@ -2,24 +2,24 @@ extends layout
 
 block content
   div.home_content
-    h1 Members Club
-    each message in messages
-      .message
+    h2.heading Messages
+    each message, index in messages
+      .message.loaded(style=`animation-delay: ${200 * (index + 1)}ms`)
         if user && (user.is_member || user.is_admin)
           .message_info
             .author
-              span Author:
-              span= message.user.full_name
+              span.text-light Author:
+              span.text-highlighted= message.user.full_name
             .date
-              span Date added:
-              span= message.date_formatted
+              span.text-light Date added:
+              span.text-highlighted= message.date_formatted
         .message_content
-          h2= message.title
+          h3= message.title
           p= message.text
         if user && user.is_admin
           .delete_ui
             a(href=`/delete/${message.id}`)
-              button(type="submit") Delete message
+              button.btn-secondary(type="submit") Delete message
 
 
   
