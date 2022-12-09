@@ -4,7 +4,7 @@ block content
   div.home_content
     h2.heading Messages
     each message, index in messages
-      .message.loaded(style=`animation-delay: ${200 * (index + 1)}ms`)
+      .message.loaded(style=`animation-delay: ${50 + 125 * (index)}ms`)
         if user && (user.is_member || user.is_admin)
           .message_info
             .author
