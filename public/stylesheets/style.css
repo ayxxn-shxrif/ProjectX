@@ -1,13 +1,13 @@
 :root {
-  --bg-color: #C4AF9A;
-  --text-color: #1E1E24;
-  --text-light: #545464;
-  --primary-color: #FB9F89;
-  --primary-hover: #F98062;
-  --primary-active: #F8603A;
-  --secondary-color: #81AE9D;
-  --secondary-hover: #6AA08B;
-  --light-color: #fff;
+  --bg-color: #16213E;
+  --text-color: #D8CBC7;
+  --text-light: #F7F4F3;
+  --primary-color: #E94560;
+  --primary-hover: #E73654;
+  --primary-active: #DB1A3A;
+  --secondary-color: #533483;
+  --secondary-hover: #4B2F75;
+  --light-color: #0F3460;
   --border-color: #A6A6B5;
   --font-primary: 'Source Sans Pro', sans-serif;
   --font-secondary: 'Libre Baskerville', serif;
@@ -69,6 +69,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 24px;
 }
 
@@ -84,6 +85,8 @@ button {
 
 .logo h1 {
   font-family: var(--font-secondary);
+  letter-spacing: -2px;
+  font-size: 32px;
 }
 
 main {
@@ -118,6 +121,10 @@ main {
 .text-light {
   font-weight: 300;
   color: var(--text-light);
+}
+
+.message_desc {
+  font-weight: 300;
 }
 
 .author, .date {
