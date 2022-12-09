@@ -73,7 +73,7 @@ exports.signup_post = [
           }
         });
       },
-      function (callback, isUsernameTaken) {
+      function (isUsernameTaken, callback) {
         if (!isUsernameTaken) {
           bcrypt.hash(req.body.password, 10, (error, hashedPassword) => {
             if (error) {
@@ -89,8 +89,16 @@ exports.signup_post = [
               if (err) {
                 return next(err);
               }
-              return res.redirect('/');
+              return res.redirect('/log-in');
             });
+          });
+        } else {
+          const error = new Error('Something went wrong');
+          error.status = 409;
+          return res.render('error', {
+            error,
+            message:
+              'Something went wrong, please contact developer immediately!!!!!!!!',
           });
         }
       },

@@ -48,7 +48,6 @@ exports.message_post = [
 
 exports.message_delete = (req, res, next) => {
   const { id } = req.params;
-  console.log(id);
   Message.findByIdAndDelete(id).exec((err) => {
     if (err) return next(err);
   });
