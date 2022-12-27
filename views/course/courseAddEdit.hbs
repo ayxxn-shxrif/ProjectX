@@ -1,0 +1,32 @@
+<!-- Obtaining value from the course controller -->
+ 
+<h3>{{viewTitle}}</h3>
+<form action="/course" method="POST">
+<input type="hidden" name="_id" value="{{course._id}}">
+ 
+<div class = "form-group">
+<label>Course Name</label>
+<input type="text" maxlength="100" class="form-control" name="courseName" placeholder="Course Name" value="{{course.courseName}}">
+ 
+<div class="text-danger">
+{{course.courseNameError}}</div>
+</div>
+<div class = "form-group">
+<label>Course ID</label>
+<input type="number" min='10000' max='99999' class="form-control" name="courseId" placeholder="Course Id" value="{{course.courseId}} " required>
+</div>
+<div class = "form-row">
+<div class = "form-group col-md-6">
+<label>Course Duration</label>
+<input type="number" min='10' max='99' class="form-control" name="courseDuration" placeholder="Course Duration (Hrs)" "{{course.courseDuration}} " required>
+</div>
+<div class = "form-group col-md-6">
+<label>Course Fee</label>
+<input type="number" min='100' max="100000" class="form-control" name="courseFee" placeholder="Course Fee (USD)" "{{course.courseFee}} " required>
+</div>
+</div>
+<div class="form-group">
+<button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+<a class="btn btn-secondary" href="/course/list"><i class="fa fa-list-alt"></i> View All Courses</a>
+</div>
+</form>
