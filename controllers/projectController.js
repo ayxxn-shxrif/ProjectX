@@ -9,7 +9,7 @@ const Projects = mongoose.model('Projects');
 //Router Controller for READ request
 router.get('/',(req, res) => {
 res.render("project/projectAddEdit", {
-viewTitle: "write ur project detail below"
+viewTitle: "Project Details Below"
 });
 });
  

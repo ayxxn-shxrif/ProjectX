@@ -5,8 +5,8 @@
 <input type="hidden" name="_id" value="{{project._id}}">
  
 <div class = "form-group">
-<label>project name</label>
-<input type="text" maxlength="100" class="form-control" name="projectName" placeholder="type project name" value="{{project.projectName}}">
+<label>Project Name</label>
+<input type="text" maxlength="100" class="form-control" name="projectName" placeholder="Type Project Name Here" value="{{project.projectName}}">
  
 <div class="text-danger">
 {{project.projectNameError}}</div>
@@ -15,15 +15,15 @@
 
 <div class = "form-group">
 <label>Project Link</label>
-<input type="url"  class="form-control" name="projectLink" placeholder="ur project link here" value="{{project.projectLink}} " required>
+<input type="url"  class="form-control" name="projectLink" placeholder="Paste Project Link Here" value="{{project.projectLink}} " required>
 </div>
 <div class = "form-row">
 <div class = "form-group col-md-6">
-<label>Project start date</label>
+<label>Start Date</label>
 <input type="date" class="form-control" name="projectStart" placeholder="input date"{{project.projectStart}} " required>
 </div>
 <div class = "form-group col-md-6">
-<label>Project End Date</label>
+<label>End Date</label>
 <input type="Date"   class="form-control" name="projectEnd" placeholder="Enter end date" "{{project.projectEnd}} " required>
 </div>
 </div>
