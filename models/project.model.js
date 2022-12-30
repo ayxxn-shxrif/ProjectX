@@ -1,20 +1,20 @@
 const mongoose = require('mongoose');
  
 //Attributes of the Course object
-var courseSchema = new mongoose.Schema({
-courseName: {
+var projectSchema = new mongoose.Schema({
+projectName: {
 type: String,
 required: 'This field is required!'
 },
-courseId: {
+projectLink: {
 type: String
 },
-courseDuration: {
+projectStart: {
 type: String
 },
-courseFee: {
+projectEnd: {
 type: String
 }
 });
  
-mongoose.model('Course', courseSchema);
+mongoose.model('Projects', projectSchema);
