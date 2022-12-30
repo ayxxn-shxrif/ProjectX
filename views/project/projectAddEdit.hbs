@@ -1,0 +1,34 @@
+<!-- Obtaining value from the project controller -->
+ 
+<h3>{{viewTitle}}</h3>
+<form action="/project" method="POST">
+<input type="hidden" name="_id" value="{{project._id}}">
+ 
+<div class = "form-group">
+<label>project name</label>
+<input type="text" maxlength="100" class="form-control" name="projectName" placeholder="type project name" value="{{project.projectName}}">
+ 
+<div class="text-danger">
+{{project.projectNameError}}</div>
+</div>
+
+
+<div class = "form-group">
+<label>Project Link</label>
+<input type="url"  class="form-control" name="projectLink" placeholder="ur project link here" value="{{project.projectLink}} " required>
+</div>
+<div class = "form-row">
+<div class = "form-group col-md-6">
+<label>Project start date</label>
+<input type="date" class="form-control" name="projectStart" placeholder="input date"{{project.projectStart}} " required>
+</div>
+<div class = "form-group col-md-6">
+<label>Project End Date</label>
+<input type="Date"   class="form-control" name="projectEnd" placeholder="Enter end date" "{{project.projectEnd}} " required>
+</div>
+</div>
+<div class="form-group">
+<button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+<a class="btn btn-secondary" href="/project/list"><i class="fa fa-list-alt"></i> View all projects</a>
+</div>
+</form>

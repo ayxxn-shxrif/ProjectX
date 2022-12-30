@@ -1,0 +1,30 @@
+<div>
+<a class="btn btn-secondary" href="/project"><i class="fa fa-plus"></i> Create New</a> 
+ 
+<h3 align="center">ayxxn-shxrif project links</h3>
+</div>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>enter project name</th>
+<th>enter project link</th>
+<th>Start month</th>
+<th>End Month</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{{#each list}}
+<tr align="center">
+<td>{{this.projectName}}</td>
+<td>{{this.projectLink}}</td>
+<td>{{this.projectStart}}</td>
+<td>{{this.projectEnd}}</td>
+<td>
+<a href="/project/{{this._id}}"> Edit </a>
+<a href="/project/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"> Delete </a>
+</td>
+</tr>
+{{/each}}
+</tbody>
+</table>
