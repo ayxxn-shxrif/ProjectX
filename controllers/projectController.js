@@ -55,12 +55,12 @@ console.log('Error during updating the record: ' + err);
 });
 }
  
-//Router to retrieve the complete list of available courses
+//Router to retrieve the complete list of available projectA
 router.get('/list', (req,res) => {
-Projects.find((err, docs) => {
+Projects.find((err, doc) => {
 if(!err){
 res.render("project/list", {
-list: docs
+list: doc
 });
 }
 else {
@@ -88,7 +88,7 @@ Projects.findById(req.params.id, (err, doc) => {
 if (!err) {
 res.render("project/projectAddEdit", {
 viewTitle: "Update Projects Details",
-project: docs
+project: doc
 });
 }
 });

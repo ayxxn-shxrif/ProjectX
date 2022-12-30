@@ -10,10 +10,10 @@ projectLink: {
 type: String
 },
 projectStart: {
-type: String
+type: Date
 },
 projectEnd: {
-type: String
+type: Date
 }
 });
  
