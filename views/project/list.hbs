@@ -7,7 +7,7 @@
 <thead>
 <tr>
 <th>Project Name</th>
-<th>Project Link</th>
+<th>Project Link</th>   
 <th>Start Date</th>
 <th>End Date</th>
 <th></th>
@@ -16,13 +16,13 @@
 <tbody>
 {{#each list}}
 <tr align="center">
-<td>{{this.projectName}}</td>
-<td>{{this.projectLink}}</td>
-<td>{{this.projectStart}}</td>
-<td>{{this.projectEnd}}</td>
+<td>{{this.project.projectName}}</td>
+<td>{{this.project.projectLink}}</td>
+<td>{{this.project.projectStart}}</td>
+<td>{{this.project.projectEnd}}</td>
 <td>
-<a href="/project/{{this._id}}"> Edit </a>
-<a href="/project/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"> Delete </a>
+<a href="/project/{{this.project._id}}"> Edit </a>
+<a href="/project/delete/{{this.project._id}}" onclick="return confirm('Are you sure to delete this record ?');"> Delete </a>
 </td>
 </tr>
 {{/each}}
