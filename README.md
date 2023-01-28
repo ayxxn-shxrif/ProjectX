@@ -23,7 +23,7 @@ npm i && npm audit fix
 
 3. run the project: 
 ```
-node script.js
+node script.js || nodemon script.js
 ```
 if above steps run error free then ![click](http//:localhost:8080) this link
 
