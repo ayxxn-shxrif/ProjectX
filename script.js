@@ -16,7 +16,7 @@ extended: true
  
 //Create a welcome message and direct them to the main page
 app.get('/', (req, res) => {
-res.send('<h2 style="font-family: Malgun Gothic; color: blue ">a simple personal data storing site using mongodb and node.js</h2>Click on right<b> <a href="/project">click here to see demo</a> </b>');
+res.send('<h2 style="font-family: Monaco; color: #394066; background:#f0f0f0; ">a simple personal data storing site using mongodb and node.js</h2><b> <a style=" font: italic bold Georgia, serif;  background:#dfc6e3;" href="/project">click here to see demo</a> </b>');
 });
 app.use(bodyparser.json());
  
