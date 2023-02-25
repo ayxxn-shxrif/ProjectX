@@ -2,7 +2,7 @@ extends layout
 
 block content
   div.home_content
-    h2.heading Messages
+    h2.heading Projects
     each message, index in messages
       .message.loaded(style=`animation-delay: ${50 + 125 * (index)}ms`)
         if user && (user.is_member || user.is_admin)
@@ -16,10 +16,13 @@ block content
         .message_content
           h3= message.title
           p.message_desc= message.text
+          a(href=message.link) 
+              button.btn.btn-primary #{message.link}
+              
         if user && user.is_admin
           .delete_ui
             a(href=`/delete/${message.id}`)
-              button.btn-secondary(type="submit") Delete message
+              button.btn-secondary(type="submit") Delete Project
 
 
   

@@ -9,8 +9,8 @@
   --secondary-hover: #4B2F75;
   --light-color: #0F3460;
   --border-color: #A6A6B5;
-  --font-primary: 'Source Sans Pro', sans-serif;
-  --font-secondary: 'Libre Baskerville', serif;
+  --font-primary: 'Nunito', sans-serif;
+  --font-secondary: 'Nunito', sans-serif;
   --box-shadow-sm: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
@@ -25,9 +25,19 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-secondary);
   font-weight: 700;
 }
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
 
-.heading {
-  text-align: center;
+a:hover {
+  color: white;
+ 
+  background-color: var(--primary-hover);
+  transform: scale(1.02);
+ border-radius: 4px;
 }
 
 .app {

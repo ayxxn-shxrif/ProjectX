@@ -6,13 +6,18 @@ exports.index = (req, res) => {
 };
 
 exports.message_post = [
+  body('link')
+  .isLength({ min: 1 })
+  .withMessage('link must be specified.')
+  .isLength({ max: 150 })
+  .withMessage('link must be maximum 550 characters.'),
   body('title')
-    .trim()
-    .isLength({ min: 1 })
-    .escape()
-    .withMessage('Title must be specified.')
-    .isLength({ max: 150 })
-    .withMessage('Title must be maximum 150 characters.'),
+  .trim()
+  .isLength({ min: 1 })
+  .escape()
+  .withMessage('Title must be specified.')
+  .isLength({ max: 150 })
+  .withMessage('Title must be maximum 150 characters.'),
   body('text')
     .trim()
     .isLength({ min: 1 })
@@ -32,6 +37,7 @@ exports.message_post = [
       const message = new Message({
         title: req.body.title,
         text: req.body.text,
+        link: req.body.link,
         user: req.user.id,
       });
       message.save((err) => {

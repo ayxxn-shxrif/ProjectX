@@ -4,17 +4,37 @@ block content
   if user
     form(class="message__form", method="POST", action="/new-message")
       div.input-group
-        label(for="title") Title:
-        input#title(type="text", name="title", placeholder="Lorem ipsum dolor sit amet...")
+        label(for="title") Project Name:
+        input#title(type="text", name="title", placeholder="Enter your project name")
       div.input-group
-        label(for="text") Text:
-        textarea#text(type="text", name="text", placeholder="Enter your message here...")
+        label(for="text") About:
+        textarea#text(type="text", name="text", placeholder="Say something about your hardwork")
+      div.input-group
+        label(for="link") link:
+        input#link(type="url", name="link", placeholder="Drop your project link here!")
       button.btn-primary(type="submit") Submit
+    
+    script.
+      document.querySelector('.message__form').addEventListener('submit', (event) => { 
+        event.preventDefault();
+    
+        const linkInput = document.querySelector('#link');
+        const link = linkInput.value;
+    
+        const decodedLink = decodeURIComponent(link);
+    
+        linkInput.value = decodedLink;
+    
+        event.target.submit();
+      });    
+
+
+
     if errors
       ul
         for error in errors
           li!= error.msg
   else
     div
-      h1 Login in order to be able to add new messages.
+      h1 Login in order to be able to add new projects.
   

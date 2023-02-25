@@ -1,23 +1,24 @@
 doctype html
 html
   head
-    title Members Only - Node.js + Express App
+    title ProjectX
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='preconnect', href='https://fonts.googleapis.com')
     link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
-    link(href='https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap')
+
   body
     .app
       header.header
         a.logo(href='/')
-          h1 Members Club
+          h1 ProjectX
         nav
           if user
             a(href="/log-out")
               button.btn.btn-primary Logout 
             a(href="/new-message")
-              button.btn.btn-primary Create New Message
+              button.btn.btn-primary Add New Project
             if !user.is_member
               a(href="/join")
                 button.btn.btn-primary Join Members Club
