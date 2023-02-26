@@ -95,11 +95,15 @@ Else u can manually run it by following the below steps:
 - Then ![click here!](http://localhost:3000/)
 
 ## Outcome
+Front page
+![login example](https://github.com/ayxxn-shxrif/ProjectX/blob/v2/public/front.png)
+Login page
+![login example](https://github.com/ayxxn-shxrif/ProjectX/blob/v2/public/login.png)
+Signup page
+![login example](https://github.com/ayxxn-shxrif/ProjectX/blob/v2/public/signup.png)
+Input page
+![login example](https://github.com/ayxxn-shxrif/ProjectX/blob/v2/public/inputs.png)
 
-Frontpage SS.
-![frontpage example](https://github.com/ayxxn-shxrif/Projects-Keeper/blob/master/example/frontpage.png)
-working Db.
-![working database example](https://github.com/ayxxn-shxrif/Projects-Keeper/blob/master/example/db.png?raw=true)
 
 ## Contributions
 
